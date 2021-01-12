@@ -2,7 +2,7 @@
 title: suyeon # your site title
 author: sybock # You :P
 description: > # Meta description of Homepage
-  자연어처린이의 성장 기록장 📝
+  NLP blog for Korean and English
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://sybock.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -19,7 +19,7 @@ navigation: # Navigation links
   - {name: 'Contact', link: '/contact'}
 
 tagline: >
-  NLP blog
+  자연어처린이의 성장 기록장 📝
 
 hero_img: posts/sleek.jpg # Main background image: use the path from /assets/img/ => This will output /assets/img/posts/sleek_lg.jpg
 
