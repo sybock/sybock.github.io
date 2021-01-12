@@ -1,8 +1,8 @@
 # SITE CONFIGURATION
-title: Suyeon # your site title
+title: suyeon # your site title
 author: sybock # You :P
 description: > # Meta description of Homepage
-  English and Korean NLP Blog
+  자연어처린이의 성장 기록장 📝
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://sybock.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
