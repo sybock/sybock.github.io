@@ -5,10 +5,13 @@ featured-img: shane-rounce-205187
 categories: [Paper Review]
 ---
 
-# Cross-Lingual Ability of Multilingual BERT: An Empirical Study
-## Paper Review
+**Paper Abstract:** Recent work has exhibited the surprising cross-lingual abilities of multilingual BERT (M-BERT) -- surprising since it is trained without any cross-lingual objective and with no aligned data. In this work, we provide a comprehensive study of the contribution of different components in M-BERT to its cross-lingual ability. 
 
-Original Paper: https://arxiv.org/abs/1912.07840
+**Original Paper:** https://arxiv.org/abs/1912.07840
+
+--
+
+## Paper Summary
 
 **Goal:** Analyze two-languages version of M-BERT (B-BERT for bilingual BERT) in three dimensions (1) linguistic properties and similarities (2) network architecture (3) input and learning objective
 
@@ -52,8 +55,9 @@ Further Work
 • Extending study to M-BERT  
 • Better understand Structural Similarity as its significance is proven in cross-lingual ability  
 
+--
 
-**My Thoughts**
+## My Thoughts
 
 - Wordpiece overlap이 transfer learning에 크게 영향이 미치지 않는다는 것을 알게된 것에 의의를 가진다. 이 논문 전에는 구조적으로 다른 언어에 대한 태깅이나 임베딩이 없는 mBERT의 선방?을 대부분 word-piece overlap이 anchor 역할을 해서 가능하다고 생각을 했다. 하지만 크게 상관이 없었다는 것은 꽤 흥미로운 발견이다.
 - 하지만 word-piece overlap의 영향을 실험하기 위해서 fake english를 만들었는데, 과연 이것이 타당한 방법인지?는 또 고민해봐야 될 것 같다
