@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Cross-Lingual Ability of Multilingual BERT: An Empirical Study"
-featured-img: shane-rounce-205187
+featured-img: Multilingual
 categories: [Paper Review]
 ---
 
