@@ -5,7 +5,7 @@ featured-img: hello
 categories: [Paper Review]
 ---
 
-**Paper Abstract:** Recent work has exhibited the surprising cross-lingual abilities of multilingual BERT (M-BERT) -- surprising since it is trained without any cross-lingual objective and with no aligned data. In this work, we provide a comprehensive study of the contribution of different components in M-BERT to its cross-lingual ability. 
+**Abstract:** Recent work has exhibited the surprising cross-lingual abilities of multilingual BERT (M-BERT) -- surprising since it is trained without any cross-lingual objective and with no aligned data. In this work, we provide a comprehensive study of the contribution of different components in M-BERT to its cross-lingual ability. 
 
 **Original Paper:** https://arxiv.org/abs/1912.07840
 
