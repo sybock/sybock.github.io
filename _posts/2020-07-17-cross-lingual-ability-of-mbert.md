@@ -16,10 +16,10 @@ categories: [Paper Review]
 **Goal:** Analyze two-languages version of M-BERT (B-BERT for bilingual BERT) in three dimensions (1) linguistic properties and similarities (2) network architecture (3) input and learning objective
 
 
-**What is M-BERT?**
-• Pre-trained the same way as BERT but using Wikipedia text from top 104 languages
-• M-BERT is contextual and training requires no supervision -- no alignment between languages
-• M-BERT produces representation that seems to generalize well cross languages for a variety of downstream tasks
+**What is M-BERT?**  
+• Pre-trained the same way as BERT but using Wikipedia text from top 104 languages  
+• M-BERT is contextual and training requires no supervision -- no alignment between languages  
+• M-BERT produces representation that seems to generalize well cross languages for a variety of downstream tasks  
 
 
 **(1) Linguistic Properties**
