@@ -33,7 +33,7 @@ tags: [Datasets, NLI, NLU]
 • Dataset is collected to be more difficult than previous datasets  
 • Longer contexts should naturally lead to harder examples, and so we constructed ANLI contexts from longer, multi- sentence source material.  
 
-![ANLI](./2020-07-24-ANLI.png "ANLI Method")
+![ANLI](https://storage.googleapis.com/groundai-web-prod/media%2Fusers%2Fuser_14%2Fproject_396530%2Fimages%2Fx1.png "ANLI Method")
 
 **Results:**  
 • RoBERTa achieves state-of-the-art performance... We obtain state of the art performance on both SNLI and MNLI with the RoBERTa model fine-tuned on our new data.   
