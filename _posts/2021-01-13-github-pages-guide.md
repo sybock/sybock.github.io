@@ -6,7 +6,7 @@ featured-img: maxresdefault
 tags: [Github Pages]
 ---
 
-Github과 별로 친하지 않은 사람으로써 Github를 통해서 블로그를 만들기로 결심한 이후 조금 애를 썼다.
+Github과 별로 친하지 않은 사람으로써 Github Pages 블로그를 만들기로 결심한 이후 조금 애를 썼다.
 
 혹시 나중에 또 블로그를 만들 때 까먹을까봐 정말 간단하게 Github를 통해 블로그를 만드는 방법에 대해서 쓰기로 했다.
 
@@ -66,7 +66,7 @@ tags: [tag1, tag2]
 
 가장 간단한 방법은 사실 Github Repo `_posts`에서 Create new file 하는 방법일 수도 있지만... 사진 올리고 markdown쓰고 이러려면 외부 프로그램 사용하는 게 더 편하다.
 
-나는 코드도 VS Code를 사용하기 때문에 블로그도 VS Code를 통해서 쓰고 있다. VS CODE와 블로그를 연동했으면 VS Code에서 `.md` 파일을 만들고 `git commit` 하면 된다. 그 방법은 역시 같은 블로그를 참고했다.
+나는 코드를 VS Code 통해서 쓰기 때문에 블로그도 VS Code로 연동했다. 연동하는 방법은 `git clone` 개념과 같은데 아래 블로그 포스트를 참고했다. 연동이 되었으면 VS Code에서 `.md` 파일을 만들어 포스트를 작성하고 `git commit` 하면 블로그에 포스트가 게재된다. 이것도 아래 블로그 참고.
 
 
 - [VS Code Github 와 연동하기](https://technote.kr/352?category=940649)
@@ -74,9 +74,11 @@ tags: [tag1, tag2]
 
 ### 주의점
 - 블로그 포스트는 `YYYY-MM-DD-TITLE.md` 이렇게 저장해줘야 날짜랑 다 잘 맞게 나온다
+- `.md` 는 Markdown 파일의 extension이다. 주피터 노트북을 써봤으면 낯설지 않을 것이다. 기본적으로 마크다운 가이드를 테마에서 포함하고 있는 거 같은데 나는 계속 참고하려고 이 [가이드](http://sybock.github.io/markdown-cheatsheet)를 아직 안 지웠다.
 - VS Code에서 포스트를 `.md` 파일로 생성할때 문서 우측 상단에 돋보기가 있는 아이콘을 클릭하면 markdown을 미리보기 할 수 있다  
    ![preview](https://i.ibb.co/DwnsjZc/Screen-Shot-2021-01-13-at-8-18-47-PM.png)  
 - 포스트에 이미지를 넣으려면 이미지를 같은 폴더에 넣어야 한다. 같은 repo 다른 폴더에서 불러오는 방법이 없다 (아니면 이미지 링크/호스팅 통해서)
+- 포스트를 작성하고 올리거나 수정했을 때 실제 사이트에 반영되는데 시간이 좀 걸린다. 인내심을 가지고 몇 분 기다려보면 된다.
 
 
 ## 마지막으로...
