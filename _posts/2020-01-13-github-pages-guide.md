@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Github Pages 블로그 만들기"
-categories: Guide
+categories: Guides
 featured-img: maxresdefault
 tags: [Github Pages]
 ---
@@ -14,7 +14,6 @@ Github과 별로 친하지 않은 사람으로써 Github를 통해서 블로그�
 
 공식 가이드인 <https://guides.github.com/features/pages/> 를 보고 만들었는데 사실 결론적으로 별로 도움이 되지는 않았기에 나만의 가이드를 작성해보기로...
 
-<br>
 
 ## Setting Up Github Pages
 
@@ -28,7 +27,6 @@ Github과 별로 친하지 않은 사람으로써 Github를 통해서 블로그�
 
 이러면 끝! 몇 분 기다리면 username.github.io 링크로 들어갈 수 있는 블로그가 생성된다.
 
-<br>
 
 ## About Github Pages 
 
@@ -42,10 +40,7 @@ Github과 별로 친하지 않은 사람으로써 Github를 통해서 블로그�
 - `_layouts`: 테마의 페이지별 HTML 코드가 들어있는 폴더. 많이 건드리지 않았지만 나는 살짝 수정해서 이미지를 지웠다. 앞으로 더 연구해서 블로그 레이아웃을 변형해볼 예정
 - `_posts`: 블로그 포스트를 저장해야되는 폴더 -  앞으로 가장 많이 쓸 폴더
 - `config.yml`: 여기서 이것저것 변경할 수 있음. 홈페이지에 뜨는 이름/글/이메일 주소 등. 테마마다 설정 범위는 다를 것이라고 생각함
-
---
-
-`filename.md`  파일을 메인 폴더에 넣으면 username.github.io/filename 이라는 링크가 생성되며 그 파일의 내용이 보인다.
+- `filename.md`  파일을 메인 폴더에 넣으면 username.github.io/filename 이라는 링크가 생성되며 그 파일의 내용이 보인다.
 
 --
 
@@ -59,14 +54,12 @@ featured-img: img_name
 categories: category_name
 tags: [tag1, tag2]
 ---
-
 ```
 
 - `layout` 뒤에는 `_layouts` 폴더에 저장되어 있는 디자인 중 하나를 고르면 됨. 그럼 그 링크는 그 레이아웃을 가짐
 - `title` 에는 꼭 `" "`을 넣어줘야 페이지가 제대로 나왔음 
 - `tag`나 `categories`가 여러개 있다면 `[]` 안에 넣어주면 됨
 
-<br>
 
 ## Posting on Github Pages
 이제 블로그를 조금 customize 했다면 첫 포스트를 써보자!
@@ -86,9 +79,7 @@ tags: [tag1, tag2]
 - 포스트에 이미지를 넣으려면 이미지를 같은 폴더에 넣어야 한다. 같은 repo 다른 폴더에서 불러오는 방법이 없다 (아니면 이미지 링크/호스팅 통해서)
 
 
-<br>
-
 ## 마지막으로...
 댓글이나 Contact Me 같은 페이지는 워낙 테마에서 잘 되어있어서 그냥 로그인하고 글만 조금 바꾼 정도로 끝났다.
 
-아직 블로그 포스트 프리뷰 이미지나 카테고리, 태깅하는 방법에 대해서 연구하는 중인데 일단 포스트를 쓰는데에는 문제가 없으니 나름 성공했다고 생각하고 있다!
+아직 블로그 포스트 프리뷰 이미지나 카테고리, 태깅하는 방법에 대해서 연구하는 중인데 일단 포스트를 쓰는데에는 문제가 없으니 나름 성공했다고 생각하고 있다.
