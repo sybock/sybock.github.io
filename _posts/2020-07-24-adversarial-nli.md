@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Adversarial NLI: A New Benchmark for Natural Language Understanding"
-featured-img: sleek
 categories: [Paper Review]
 tags: [Datasets, NLI, NLU]
 ---
