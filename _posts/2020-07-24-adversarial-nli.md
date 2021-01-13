@@ -8,9 +8,9 @@ tags: [Datasets, NLI, NLU]
 
 **Abstract:** We introduce a new large-scale NLI benchmark dataset, collected via an iterative, adversarial human-and-model-in-the-loop procedure. We show that training models on this new dataset leads to state-of-the-art performance on a variety of popular NLI benchmarks, while posing a more difficult challenge with its new test set.
 
-**Original Paper:** https://arxiv.org/abs/1910.14599
+[Original Paper](https://arxiv.org/abs/1910.14599)
 
-**Website:** https://www.adversarialnli.com/
+[Website:](https://www.adversarialnli.com/)
 
 --
 
