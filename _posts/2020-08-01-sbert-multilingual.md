@@ -24,6 +24,8 @@ tags: [BERT]
 • Student Model: XML-RoBERTa  b/c uses SentencePiece, which avoids language specific pre-processing & uses a vocabulary with 250k entries from 100 different languages.  
 • Training Data: The OPUS website (Tiede- mann, 2012) provides parallel data for hundreds of language pairs.   
 
+![teacher-student](https://dair.ai/images/summary-making-monolingual-senence-embeddings-multilingual-using-knowledge-distillation/training-process-schematic.png)
+
 **Task:**  
 (1) Multilingual Semantic Textual Similarity: assign for a pair of sentences a score indicating their semantic similarity. Score of 0 indicates not related and 5 indicates semantically equivalent.  
 • Outperforms existing model using extended multilingual STS 2017 dataset  
