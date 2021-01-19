@@ -128,9 +128,6 @@ kaistcorpus_written_raw_or_literature_biography_mh2-0736.txt  kaistcorpus_writte
 나는 아래 코드를 짜서 사용했다.
 
 ```python
-import os
-import re
-
 def extract_text(in_path,out_path,start_marker,end_marker):
     """
     in_path: path of input file
