@@ -124,42 +124,29 @@ kaistcorpus_written_raw_or_literature_biography_mh2-0736.txt  kaistcorpus_writte
 
 보면 알 수 있겠지만 이 말뭉치에 있는 모든 파일은 `html`처럼 정리가 되어있고 사실 필요한 부분은 `<tdmsfiletext>`에 있는 문장들이다. 그 외 내용은 모델 pre-training에 별 도움이 안될 것이다.
 
-이제는 파이썬 코드를 사용해서 `<tdmsfiletext>` 아래에 있는 문장들만 추출하자.
+이제는 파이썬 코드를 사용해서 `<tdmsfiletext>`와 `</tdmsfiletext>` 사이에 있는 문장들만 추출하자.  
+나는 아래 코드를 짜서 사용했다.
 
 ```python
 import os
 import re
 
-# Define path to dataset
-path = '/data/kaist_rawcorpus/'
-
-# Get list of directories in dataset directory
-for folder in os.listdir(path):
-
-    # Get list of documents in each dataset directory
-    # Assumes ONLY text files are in directory
-    for docu in os.listdir(path+folder):
-
-        # Read raw corpus doc
-        f = open(path+folder+'/'+docu) 
-        lines = f.readlines()
-
-        # Write new corpus doc
-        o = open('/data/kaist_rawcorpus/'+docu, 'w')
-        for l in range(0, len(lines)):
-            # Write lines from <tdmsfiletext> until </tdmsfiletext> found
-            if re.search('<tdmsfiletext>', lines[l]):
-                for k in range(l+1, len(lines)):
-                    if lines[k].strip() == '</tdmsfiletext>':
-                        break
-                    else:
-                        rawLine = re.sub('<[^<>]*>', '', lines[k])
-                        o.write(rawLine+'\n')
-        # Print progress
-        print(f'file {docu} Done!')
+def extract_text(in_path,out_path,start_marker,end_marker):
+    """
+    in_path: path of input file
+    out_path: path of output file
+    """
+    with open(in_path,'r') as r:
+        is_text = False
+        with open(out_path,'w') as o:
+            for line in r:
+                if line.strip() == start_marker: is_text = True; continue
+                elif line.strip() == end_marker: is_text = False
+                if is_text and line.strip() != '' and not line.startswith('<'):
+                    o.write(line)
 ```
 
-사실 파이썬으로 인코딩도 바꿔줄 수 있고 한 파일로 모든 줄을 출력할 수 있을텐데, 인코딩 변환은 파이썬에서 더 까다롭고 잘 안되는 경우가 있다... (내 능력의 한계인가?) 리눅스로 하는 것이 더 마음이 편하고 오래 걸리지도 않는다. 파이썬을 통해서 모든 문서를 한 파일로 출력하는 건 `open(document, 'w')`를 그냥 바깥 loop 에 빼주면 된다. 필요에 따라 변형해서 사용하면 된다.
+사실 파이썬으로 인코딩도 바꿔줄 수 있고 한 파일로 모든 줄을 출력할 수 있을텐데, 인코딩 변환은 파이썬에서 더 까다롭고 잘 안되는 경우가 있다... (내 능력의 한계인가?) 리눅스로 하는 것이 더 마음이 편하고 오래 걸리지도 않는다. 그리고 인코딩을 파이썬에서 바꾸고 싶다면 또 parameter로 pass해야되는 번거로움?이 있고... 그거에 따라 함수를 또 더 복잡하게 짜야된다. 그래서 인코딩은 개인적으로 그냥 리눅스로 하는게 좋다.   파이썬을 통해서 모든 문서를 한 파일로 출력하는 건 `open(document, 'w')`를 그냥 바깥 loop 에 빼주면 된다. 필요에 따라 변형해서 사용하면 된다.
 
 이렇게 간단히(?) 전-전처리가 끝나고 이제 정말 어려운 전처리를 해야될 차례다.
 
