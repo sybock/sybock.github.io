@@ -30,16 +30,16 @@ Pre-train 모델의 성능은 데이터의 양질에 완전히 의존한다. 한
 
 # 전-전처리
 
-본격적인 데이터 전처리를 하기 전에 전처리 준비를 해야된다.
+본격적인 데이터 전처리를 하기 전에 전처리 준비를 해야된다. 참고로 나는 Mac OS를 사용하고 있다.
 
 무슨 말이냐면, 데이터가 아주 깨끗하게 한줄에 한 문장 씩 딱 나와있으면 좋겠지만 그런 경우는 드물고 encoding을 변경해야되는 경우도 있다. 그래서 전-전처리가 필요하다. 데이터를 전처리할 수 있도록 데이터를 가공해주는 것이다. 크게 보면 아래 세 가지 작업으로 나눌 수 있다:
 1. 필요한 text만 파일에서 추출 
-2. 한 파일에 모든 문장 저장 
+2. 한 파일에 모든 문서 이어서 저장 
 3. 인코딩 변환 (필요하면) 
 
-<br>
+--
 
-예를 보면서 설명해보자. 
+`kaist corpus`를 보면서 설명해보자. 
 
 `kaist-raw-corpus`는 압축을 풀면 아래와 같이 폴더별로 데이터가 정리되어 있다. 
 
@@ -122,14 +122,15 @@ kaistcorpus_written_raw_or_literature_biography_mh2-0736.txt  kaistcorpus_writte
  시기이기도 했다.
 ```
 
-보면 알 수 있겠지만 이 말뭉치에 있는 모든 파일은 `html`처럼 정리가 되어있고 사실 필요한 부분은 `<tdmsfiletext>`에 있는 문장들이다. 그 외 내용은 모델 pre-training에 별 도움이 안될 것이다.
+보면 알 수 있겠지만 이 말뭉치에 있는 모든 파일은 `html`처럼 정리가 되어있고 사실 필요한 부분은 `<tdmsfiletext>`와 `</tdmsfiletext>` 사이에 있는 문장들이다. 그 외 내용은 모델 pre-training에 별 도움이 안될 것이다.
 
-이제는 파이썬 코드를 사용해서 `<tdmsfiletext>`와 `</tdmsfiletext>` 사이에 있는 문장들만 추출하자.  
+이제는 파이썬을 사용해서 `<tdmsfiletext>`와 `</tdmsfiletext>` 사이에 있는 문장들만 추출하자.  
 나는 아래 코드를 짜서 사용했다.
 
 ```python
 def extract_text(in_path,out_path,start_marker,end_marker):
     """
+    This code extracts text between start_marker and end_marker in input file and writes a new file as output.
     in_path: path of input file
     out_path: path of output file
     """
@@ -143,7 +144,7 @@ def extract_text(in_path,out_path,start_marker,end_marker):
                     o.write(line)
 ```
 
-사실 파이썬으로 인코딩도 바꿔줄 수 있고 한 파일로 모든 줄을 출력할 수 있을텐데, 인코딩 변환은 파이썬에서 더 까다롭고 잘 안되는 경우가 있다... (내 능력의 한계인가?) 리눅스로 하는 것이 더 마음이 편하고 오래 걸리지도 않는다. 그리고 인코딩을 파이썬에서 바꾸고 싶다면 또 parameter로 pass해야되는 번거로움?이 있고... 그거에 따라 함수를 또 더 복잡하게 짜야된다. 그래서 인코딩은 개인적으로 그냥 리눅스로 하는게 좋다.   파이썬을 통해서 모든 문서를 한 파일로 출력하는 건 `open(document, 'w')`를 그냥 바깥 loop 에 빼주면 된다. 필요에 따라 변형해서 사용하면 된다.
+사실 파이썬으로 인코딩도 바꿔줄 수 있고 한 파일로 모든 줄을 출력할 수 있을텐데, 인코딩 변환은 파이썬에서 더 까다롭고 잘 안되는 경우가 있다(내 능력의 한계인가ㅠㅠ). 리눅스로는 간단하고 빠르게 인코딩을 변환할 수 있기 때문에 리눅스로 하는 것을 추천한다. 그리고 인코딩을 파이썬에서 변환하려고 하면 parameter도 늘어나고 함수도 더 복잡해진다. 파이썬을 통해서 모든 문서를 한 파일로 출력하는 건 `open(document, 'w')`를 그냥 바깥 loop 에 빼주면 된다. 필요에 따라 코드를 변형해서 사용하면 된다.
 
 이렇게 간단히(?) 전-전처리가 끝나고 이제 정말 어려운 전처리를 해야될 차례다.
 
