@@ -130,7 +130,8 @@ kaistcorpus_written_raw_or_literature_biography_mh2-0736.txt  kaistcorpus_writte
 ```python
 def extract_text(in_path,out_path,start_marker,end_marker):
     """
-    This code extracts text between start_marker and end_marker in input file and writes a new file as output.
+    This code extracts text between start_marker and end_marker 
+    in input file and writes a new file as output.
     in_path: path of input file
     out_path: path of output file
     """
