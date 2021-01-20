@@ -2,7 +2,7 @@
 layout: post
 title: "한국어 코퍼스 리스트 및 전처리 준비"
 categories: [Guides]
-featured-img: kr-corpus
+featured-img: sejong
 tags: [NLP, Corpus, Korean NLP]
 ---
 
