@@ -124,7 +124,7 @@ def make_parallel_corpus(input_path, output_path):
 
 I only processed these two datasets, so I don't know what the other ones look like, but I'm sure this code can be adapted for other datasets in OPUS if necessary. It would've been a little bit more simplistic without all the noise in the subtitles dataset but I think it still looks okay.
 
-I've been trying to minimize data storage in all of my codes, using the least possible number of variables without sacrificing readability. I think this code would've been easier to write by just saving all the source and target sentences to a list and then writing it into the output file later. But I'm begining to find that practicing using less variables actually makes the code cleaner and I'm sure it has implications in performance, although the datasets I processed were not that large. Would be fun later to time/measure the two different types of functions and compare.
+I've been trying to minimize data storage in all of my codes, using the least possible number of variables without sacrificing readability. I think this code would've been easier to write by just saving all the source and target sentences to a list and then writing it into the output file later. But I'm begining to find that practicing using less variables actually makes the code cleaner and I'm sure it has implications in performance, although the datasets I processed were not large enough for such implications to be noticeable. Would be fun later to time/measure the two different types of functions and compare.
 
 <br>
 

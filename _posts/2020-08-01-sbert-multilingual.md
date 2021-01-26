@@ -44,4 +44,7 @@ tags: [BERT]
 <br>
 
 # My Thoughts
-- 
+- A really simple but innovative way to apply transfer learning
+- Advantageous in that you can utilize a variety of pre-trained models for the teacher/student models
+- Interesting that the curse of multilinguality also applies to these models. If XLM-R is chosen as the student model and is trained with one specific language and shows moderate performance, is that overcoming the curse of multilinguality? Will the student model be able to overcome the curse of multilinguality by applying the same techniques as the authors of XLM-R? (increasing model size etc.)
+- Again, importance of good data!!
