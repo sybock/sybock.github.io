@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Korean NLP Preprocessing Moduel | 한국어 전처리 모듈 만들기"
+title: "Korean NLP Preprocessing Module | 한국어 전처리 모듈 만들기"
 categories: [Guides]
 featured-img: calligraphy
 tags: [NLP, Korean NLP]
