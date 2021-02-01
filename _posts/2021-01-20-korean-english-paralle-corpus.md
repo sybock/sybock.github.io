@@ -37,7 +37,7 @@ To download the corpus, I used [OpusTools](https://github.com/Helsinki-NLP/OpusT
     ```
 2. Use the `opus_read` script from Terminal to download raw files and align them. Refer to their official site for information on the language codes and find the directories [here](http://opus.nlpl.eu/opusapi/?corpora=True). English is `en` and Korean is `ko`
     ```
-    opus_read -d DIRECTORY -s SOURCE_LANG -t TARGET_LANG -write FILENAME.txt
+    opus_read -d DIRECTORY -s SOURCE_LANG -t TARGET_LANG --write FILENAME.txt
     ```
 
 That's it for downloading the corpus. 
