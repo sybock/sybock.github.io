@@ -39,6 +39,7 @@ mathjax: true
 - 1 layer has two sub-layers (1) multi-head self attention, (2) feed-forward network
 - residual connection around each two sub-layers followed by layer normalization = $LayerNorm(x + Sublayer(x))$
 - $d_{model} = 512$
+
 **Decoder:**
 - N = 6 identical layers
 - 1 layer has three sub-layers (1) masked encoder-decoder attention (2) multi-head self attention, (3) feed-forward network
