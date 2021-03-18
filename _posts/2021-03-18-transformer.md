@@ -37,7 +37,7 @@ mathjax: true
 **Encoder:** 
     - N = 6 identical layers
     - 1 layer has two sub-layers (1) multi-head self attention, (2) feed-forward network
-    - residual connection around each two sub-layers followed by layer normalization = $LayerNorm(x + Sublayer(x))
+    - residual connection around each two sub-layers followed by layer normalization = $LayerNorm(x + Sublayer(x))$
     - $d_model = 512$
 **Decoder:**
     - N = 6 identical layers
@@ -56,10 +56,10 @@ mathjax: true
     - h = 8
     - d/h = 64
 
-**Feed-Forward Networks**
-    - $FFN(x) = max(0, xW_1 + b_1)W_2 + b_2$
+**Feed-Forward Networks**<br>
+    - $FFN(x) = max(0, xW_1 + b_1)W_2 + b_2$<br>
     - two linear transformations with a ReLU activation in between
-    - $d_model = 512$ and inner-layer has dimensionality $d_{ff} = 2048$
+    - $d_{model} = 512$ and inner-layer has dimensionality $d_{ff} = 2048$
 
 **Embeddings and Softmax**: used to convert decoder output to predicted next-token probabilities
 
