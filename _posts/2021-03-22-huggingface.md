@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "HuggingFace 정복하기"
-categories: [Guide]
+categories: [Guides]
 featured-img: hugging
 tags: [NLP, HuggingFace]
 mathjax: true
