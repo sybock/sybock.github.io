@@ -2,7 +2,7 @@
 layout: post
 title: "Attention is All You Need"
 categories: [Paper Review, NLP Model]
-featured-img: transformers
+featured-img: bee
 tags: [NLP, Transformer, Attention]
 mathjax: true
 ---
