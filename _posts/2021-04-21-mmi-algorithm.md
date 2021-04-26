@@ -93,7 +93,7 @@ Approximation approach:
 
 **English-German Results**
 - We reported progressive performances as we add in more features for reranking.
-- Among all the features, reverse probability from mutual information (i.e., p(x|y)) yields the most significant performance boost, +1.4 and +1.1 for standard SEQ2SEQ models without and with unknown word replacement, +0.9 for attention models
+- Among all the features, reverse probability from mutual information (i.e., $p(x\|y)$) yields the most significant performance boost, +1.4 and +1.1 for standard SEQ2SEQ models without and with unknown word replacement, +0.9 for attention models
 - we observe consistent performance boost introduced by language model.
 - We see the benefit from our diverse N-best list by comparing *mutual+diversity* models with *diversity* models. On top of the improvements from standard beam search due to reranking, the diversity models introduce additional gains of +0.4, +0.3 and +0.3, leading the total gains roughly up to +2.6, +2.6, +2.1 for different models.
 
