@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Codility Lessons 1-5"
+title: "Codility Lessons 2-5"
 categories: [Python]
 featured-img: binary2
 tags: [Python]
