@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Abstractive Summarization in NLP: Training with BERT and S-BERT"
+title: "Extractive Summarization in NLP: Training with BERT"
 categories: [NLP Model]
 featured-img: blackboard
 tags: [NLP]
