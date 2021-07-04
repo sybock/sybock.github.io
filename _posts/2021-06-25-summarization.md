@@ -12,7 +12,7 @@ Among the many challenges faced by Natural Language Processing (NLP) researchers
 
 The summarization task in NLP is split into two separate ones: abstractive and extractive summarization. As you can guess from their respective adjectives,  **abstractive summarization** involves re-writing the given text into an original summary while **extractive summarization** involves choosing key sentences in the given text to serve as the summary.
 
-Both tasks require the model to "understand" the main point of the text but they differ in that abstractive summaries obviously have to involve some form of a generation model, while extractive summaries do not. In fact, the extractive summarization task is regarded a binary classification problem involving sentence-level embeddings. 
+Both tasks require the model to "understand" the main point of the text but they differ in that abstractive summaries have to involve some form of a generation model, while extractive summaries do not. In fact, the extractive summarization task is regarded a binary classification problem involving sentence-level embeddings. 
 
 Today, I want to focus on extractive summarization and how to train a Transformer-based model for this task.
 <br>
